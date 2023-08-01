@@ -23,7 +23,7 @@
         # Measures of Central Tendency -  Mean, Mode, Median
         # Measures of Dispersion - Range, Variance, Standard Deviation
         #Inferential Stats consists of methods that use sample results to help make decisions or predictions. LR, Decision Tree, Neural Networks are its examples or tools.
-    # 2.3 Describig data graphically 
+    # 2.3 Describing data graphically 
         # Histograms, Box Plots, Scatter Plots, Bar Graphs, Pie Charts etc
         # Frequency Distribution for qualitative data lists all categories and no. of elements that belong to each of the categories.
         # Frequency Distribution for quantative data lists all classes and number of values that belong to each class. Here we have grouped data.
@@ -229,6 +229,7 @@ def numpylib():
 #to import
 import pandas as pd
 def pandaslib():
+    global df 
     df = pd.read_csv("C:\python\Deep_Learning_Internshala\Customer.csv")
     # To read csv file 
     df.head()
@@ -247,3 +248,63 @@ def pandaslib():
     # To See data of first 5 rows
     df.iloc[0:5, 0:2]
     # To See data of first 5 rows and first 2 columns
+        # 4.3 Seaborn
+            # Seaborn is a Python data visualization library based on matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics.
+# to import
+import seaborn as sns
+def seabornlib():
+    sns.distplot(df.Age)
+    # To See distribution plot of Age column
+    sns.distplot(df.Age, kde=False)
+    # To See distribution plot of Age column without density curve
+    sns.distplot(df.Age, kde=False, color="red")
+    # To See distribution plot of Age column without density curve and with red color
+    sns.distplot(df.Age, kde=False, color="red", bins=10)
+    # To See distribution plot of Age column without density curve and with red color and 10 bins
+    iris = sns.load_dataset("iris")
+    # To load iris dataset
+    iris.shape
+    # To See number of rows and columns
+    sns.jointplot(x="sepal_length", y="sepal_width", data=iris)
+    # To See joint plot of sepal_length and sepal_width(scatter plot)
+    sns.pairplot(iris)
+    # To See pair plot of iris dataset
+
+#Assignment 2
+def assignment2():
+    data1 = pd.read_csv("Assignment_2_fifa18_clean.csv")
+    # To read csv file
+    data1.head()
+    # To See first 5 rows
+    data1.describe()
+    # To See summary statistics - percentile, mean, std etc
+    sns.displot(data1,x="Wage_Euro")
+    # To see distribution plot for Wage_Euro
+    sns.jointplot(x="Wage_Euro", y="Overall", data=data1)
+    # To See joint plot of Wage_Euro and Overall
+
+    #5. Intro to Machine Learning and Deep Learning
+        # 5.1 Machine Learning
+            # Machine Learning is the field of study that gives computers the ability to learn without being explicitly programmed.
+            # When Machine tries to improve its performance based on past data
+            # Machine Learning is of 3 types - Supervised Learning, Unsupervised Learning and Reinforcement Learning
+            # ML Algorithms like LR, Logistic Regression, Decision Tree, ANN
+        # 5.2 Deep Learning
+            # Deep Learning is a subset of Machine Learning, which is a subset of Artificial Intelligence.
+            # Deep Learning is inspired by the human brain, which is made up of billions of neurons.
+            # Deep Learning is used to solve complex problems like image classification, speech recognition, object detection etc.
+            # Neural networks are known as Deep Learning Models
+        # 5.3 Type of ML Problems
+            # Classification - Predicting a category or class
+            # when output is categorical variable
+            # Regression - Predicting a continuous value
+            # when output is continuous variable
+        # 5.4 Steps inn Building ML Model
+            # 1. Problem Formulation - Convert business problem into Statistical Problem
+            # 2. Data Tidying - Transformed collected data into a useable data table format
+            # 3. Data Preprocessing - Filtering of data, aggregate values, missing value and outliers treatment, variable transformation and reduction.
+            # 4. Test-Train Split - Splitting data into data used to train the model and data used for predictions
+            # 5. Model Training - Building a model using training data
+            # 6. Model Evaluation - Evaluating the model using test data using performance metrics.
+            # 7. Prediction - setup a pipleine to use model in real life and improvement if needed
+
