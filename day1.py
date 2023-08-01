@@ -140,4 +140,110 @@ def dictionaries():
     type(d1) #Output: dict
     #Slicing eg:
     print(d1[0:3]) # Output : TypeError: unhashable type: 'slice'
-    
+
+#Question - ASSIGNMENT
+# Declare a variable named ‘str’ with value as "Python course". Write queries to output the following results
+    #The first character of the ‘str’
+    #2nd to 5th character of the ‘str’
+    #Last character of the ‘str’
+    #The reverse of ‘str’ i.e. 'esruoc nohtyP'
+    #Every alternate character (1st, 3rd, 5th…..) of ‘str’
+    #Every alternate character (2nd, 4th, 6th….) of ‘str’ from the 2nd character
+
+def assignment():
+    str = "Python Course"
+    print(str[0]) # Output : P
+    print(str[1:5]) # Output : ytho
+    print(str[-1]) # Output : e
+    print(str[::-1]) # Output : esruoC nohtyP
+    print(str[::2]) # Output : PtoCue
+    print(str[1::2]) # Output : yhnCrs
+
+    # 4. Python Libraries 
+        # 4.1 NumPy
+        # NumPy used for working with arrays and it is upto 50 times faster than python lists because it is written on C++.
+        # The array object in NumPy is called ndarray.
+#to import
+import numpy as np
+def numpylib():
+    np1 = np.array([1,2,3,4,5])
+    print(np1) # Output : [1 2 3 4 5]
+    type(np1)
+    # Output : numpy.ndarray
+    #np.array -> defines an ndarray
+    Mat1 = np.array([[1,2],[3,4]])
+    print(Mat1)
+    #Output: [[1 2]
+    #         [3 4]]    
+    #np.arange -> defines an ndarray with evenly spaced values within a given interval
+    Mat2 = np.arange(0,10,1)
+    print(Mat2)
+    #Output: [0 1 2 3 4 5 6 7 8 9]
+    #np.linspace -> defines an ndarray with evenly spaced values within a given interval
+    Mat3 = np.linspace((0,10,20))
+    print(Mat3)
+    #Output: [ 0.          0.52631579  1.05263158  1.57894737  2.10526316  2.63157895
+    #          3.15789474  3.68421053  4.21052632  4.73684211  5.26315789  5.78947368
+    #          6.31578947  6.84210526  7.36842105  7.89473684  8.42105263  8.94736842
+    #          9.47368421  10.        ]
+    #np.random.rand -> defines an ndarray with random values
+    Mat4 = np.random.rand(5,5)
+    print(Mat4)
+    #Output: [[0.92961609 0.31637555 0.18391881 0.20456028 0.56772503]
+    #         [0.5955447  0.96451452 0.6531771  0.74890664 0.65356987]
+    #         [0.74771481 0.96130673 0.0083883  0.10644438 0.29870371]
+    #         [0.65641118 0.80900791 0.87219247 0.96499075 0.41192642]
+    #         [0.35997806 0.54908353 0.57367585 0.9292962  0.31856895]]
+    #np.random.randn -> defines an ndarray with random values
+    Mat5 = np.random.randn(2,2)
+    print(Mat5)
+    #Output: [[-0.10757829  0.20119455]
+    #         [ 0.09488596 -0.1043849 ]]
+    #np.random.randint -> defines an ndarray with random integers
+    Mat6 = np.random.randint(1,100,10)
+    print(Mat6)
+    #Output: [ 8  9  1  2  1  1  1  1  1 10]
+    #np.zeros -> defines an ndarray with all zeros
+    Mat7 = np.zeros((2,2))
+    print(Mat7)
+    #Output: [[0. 0.]
+    #         [0. 0.]]
+    #np.ones -> defines an ndarray with all ones
+    Mat8 = np.ones((2,2))
+    print(Mat8)
+    #Output: [[1. 1.]
+    #         [1. 1.]]
+    #np.eye -> defines an ndarray with ones on the diagonal and zeros elsewhere
+    Mat9 = np.eye(4)
+    print(Mat9)
+    #Output: [[1. 0. 0. 0.]
+    #         [0. 1. 0. 0.]
+    #         [0. 0. 1. 0.]
+    #         [0. 0. 0. 1.]
+        
+        #4.2 Pandas~
+        # Pandas is used for data manipulation and analysis. It is built on top of NumPy.
+        # The two main data structures in Pandas are Series and DataFrame.
+        # Series is a one-dimensional array with labels called index.
+        # DataFrame is a two-dimensional array with labels called index and columns.
+#to import
+import pandas as pd
+def pandaslib():
+    df = pd.read_csv("C:\python\Deep_Learning_Internshala\Customer.csv")
+    # To read csv file 
+    df.head()
+    # To See first 5 rows
+    df.tail()
+    # To See last 5 rows
+    df.describe()
+    # To See summary statistics
+    df.info()
+    # To See data types of each column
+    df.shape
+    # To See number of rows and columns
+    df.iloc["Column_Name"]
+    # To See a particular column
+    df.iloc[0:5]
+    # To See data of first 5 rows
+    df.iloc[0:5, 0:2]
+    # To See data of first 5 rows and first 2 columns
