@@ -31,7 +31,59 @@
         # Skewed graph - 
             # Positively skewed graph - data is concentrated on the left side of the graph.
             # Negatively skewed graph - data is concentrated on the right side of the graph.
-    # Mesures  of Central Tendency
+    # Measures of Central Tendency
         # Mean - Average of all values; Mean = Sum of all values / Number of values
-        # Median - Middle value of all values = 
+        # Median - Middle value of all values, rank data in ascending order. 
+        # Mode - Most frequently occuring value in the data. 
+        # Bimodal if data has 2 modes, Multimodal if data has multiple modes.
+        # Prefer to treat outliers before calculating any of the above.
+    # Measures of Dispersion
+        # Range - Difference between highest and lowest value in the data. Range = largest value - smallest value
+        # Variance - Average of squared differences from the mean. Variance = ((x - u)^2)/N 
+        # Standard Deviation - Square root of variance. 
+        # Standard Deviation is the most commonly used measure of dispersion.
 
+# 3. Python Basics
+    # 3.1 Arithmetic Operations
+        # Addition, Subtraction, Multiplication, Division, Modulus, Exponentiation, Floor Division
+def arithmetic():
+    a  = 10
+    b = 5
+    add = a+b 
+    sub = a-b
+    mul = a*b
+    div = a/b
+    mod = a%b
+    exp = a**b
+    floor = a//b
+    print(a>b) # Output : True
+    print(add, sub, mul, div, mod, exp, floor)
+    # Output : 15 5 50 2.0 0 100000 2
+    # 3.2 Variables
+        # Variables are used to store values in the memory, they are case sensitive and reassigned, can be of any length, can contain only letters, numbers and underscore, they can not be keywords or special characters.
+        # Variables can be of any data type.
+    # 3.3 Strings
+        # Strings are immutable, they can be accessed using index, they can be sliced, they can be concatenated, they can be repeated, they can be formatted.
+def str():
+    str1 = "Internshala DL Course"
+    #Indexing eg:
+    print(str1[0]) # Output : I
+    #Reversing eg:
+    print(str1[::-1]) # Output : esruoC LD alahsnret nretnI
+    #Slicing eg:
+    print(str1[0:10]) # Output : Internshal 
+    #Concatenation eg:
+    str2 = " is awesome"
+    print(str1+str2) # Output : Internshala DL Course is awesome
+    #formatting
+    age = 20
+    name = "Rahul"
+    print("My name is {} and I am {} years old".format(name, age)) # Output : My name is Rahul and I am 20 years old
+    #functions 
+    print(str1.lower()) # Output : internshala dl course
+    print(str1.upper()) # Output : INTERNSHALA DL COURSE
+    print(str1.split()) # Output : ['Internshala', 'DL', 'Course']
+    print(str1.replace("DL", "Deep Learning")) # Output : Internshala Deep Learning Course
+    print(len(str1)) # Output: 24
+    print(str1.count("a")) # Output : 2
+    
