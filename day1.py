@@ -86,4 +86,58 @@ def str():
     print(str1.replace("DL", "Deep Learning")) # Output : Internshala Deep Learning Course
     print(len(str1)) # Output: 24
     print(str1.count("a")) # Output : 2
+    # 3.4 Lists
+        # Lists are mutable, they can be accessed using index, they can be sliced, they can be concatenated, they can be repeated, they can be formatted.
+def lists():
+    l1 = [1,2,3,4,5]
+    l2 = ['one', 'two', 'three']
+    l3 = [0.4, 5, 'number', True]
+    #Indexing eg:
+    print(l1[0]) # Output : 1
+    #Reversing eg:
+    print(l1[::-1]) # Output : [5, 4, 3, 2, 1]
+    type(l1) #Output: list
+    #Slicing eg:
+    print(l1[0:3]) # Output : [1, 2, 3]
+    #Concatenation eg:
+    l4 = l1 + l2
+    print(l4) # Output : [1, 2, 3, 4, 5, 'one', 'two', 'three']
+    list(range(0,10,2))
+    #Output : [0, 2, 4, 6, 8]
+    l4.append("4i")
+    print(l4) # Output : [1, 2, 3, 4, 5, 'one', 'two', 'three', '4i']
+    l4.pop()
+    print(l4) # Output : [1, 2, 3, 4, 5, 'one', 'two', 'three']
+    # 3.5 Tuples
+        # Tuples are immutable, they can be accessed using index, they can be sliced, they can be concatenated, they can be repeated, they can be formatted.
+def tuples():
+    t1 = (1,2,3,4,5)
+    t2 = ('one', 'two', 'three')
+    t3 = (0.4, 5, 'number', True)
+    #Indexing eg:
+    print(t1[0]) # Output : 1
+    #Reversing eg:
+    print(t1[::-1]) # Output : (5, 4, 3, 2, 1)
+    type(t1) #Output: tuple
+    #Slicing eg:
+    print(t1[0:3]) # Output : (1, 2, 3)
+    #Concatenation eg:
+    t4 = t1 + t2
+    print(t4) # Output : (1, 2, 3, 4, 5, 'one', 'two', 'three')
+    t1[0] = 3
+    # Output : TypeError: 'tuple' object does not support item assignment
+    # 3.6 Dictionaries
+        # Dictionaries are mutable, they can be accessed using keys, they can be sliced, they can be concatenated, they can be repeated, they can be formatted.
+def dictionaries():
+    d1 = {'name':"John Doe",'age':'30','city':'New York'}
+    print(d1)
+    # Output : {'name': 'John Doe', 'age': '30', 'city': 'New York'}
+    #Indexing eg:
+    print(d1['name']) # Output : John Doe
+    print(d1['city']) # Output : New York
+    #Reversing eg:
+    print(d1[::-1]) # Output : TypeError: unhashable type: 'slice'
+    type(d1) #Output: dict
+    #Slicing eg:
+    print(d1[0:3]) # Output : TypeError: unhashable type: 'slice'
     
